@@ -1,0 +1,113 @@
+:root {
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --toolbar-bg: #f8fafc;
+}
+
+/* DARK THEME VARS */
+.dark {
+  --bg: #0b1220;
+  --panel: #0f1724;
+  --text: #e6eef8;
+  --muted: #94a3b8;
+  --border: #1f2937;
+  --toolbar-bg: #0f1724;
+}
+
+/* Global page */
+body {
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* App container */
+.app-container {
+  max-width: 900px;
+  margin: 18px auto;
+  padding: 16px;
+  color: var(--text);
+}
+
+/* Panel */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+/* Header row */
+.header-row {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+}
+
+/* Users list badges */
+.user-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-right:8px;
+  color:var(--text);
+}
+
+/* Editor container overrides for Quill Snow (light->dark) */
+.ql-toolbar {
+  background: var(--toolbar-bg) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.ql-container.ql-snow {
+  border: none;
+  background: var(--panel) !important;
+  color: var(--text);
+  min-height: 320px;
+  font-size: 15px;
+}
+
+/* Quill editable area */
+.ql-editor {
+  color: var(--text);
+  background: transparent;
+}
+
+/* Link color */
+.ql-editor a {
+  color: #60a5fa;
+}
+
+/* Selection highlight (dark friendly) */
+.ql-editor ::selection {
+  background: rgba(96,165,250,0.28);
+}
+
+/* Buttons and small UI */
+.toggle-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Make toolbar icons visible in dark */
+.ql-snow .ql-stroke, .ql-snow .ql-fill {
+  stroke: currentColor !important;
+  fill: currentColor !important;
+  color: var(--text) !important;
+}
+
+/* Small responsive */
+@media (max-width:640px){
+  .app-container { padding: 10px; }
+}
