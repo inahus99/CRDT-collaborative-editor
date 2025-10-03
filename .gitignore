@@ -1,0 +1,57 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+.cache/
+.out/
+.next/
+*.log
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+
+# IDE project settings
+.vscode/
+.idea/
+*.iml
+
+# Coverage / test outputs
+coverage/
+*.lcov
+
+# Local databases or snapshots
+*.sqlite
+*.db
+snapshot*.json
+
+# Puppeteer / Playwright artifacts
+test-results/
+.playwright/
+
+# Client specific (Vite/React)
+client/node_modules/
+client/dist/
+
+# Server specific (Node/Express)
+server/node_modules/
+server/dist/
+server/logs/
+
+# Yjs IndexedDB snapshots (local browser storage, not needed in repo)
+*.ldb
+*.leveldb
